@@ -1,28 +1,16 @@
-== README
+== Simple User and Move relationship
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+User has many Moves and a hash field called name
+Move belong to one User and two addresses hash field
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* install mongo
+* make sure ruby/rvm/gem are updated to the latest
+* mongo does not supports rails’ active record so we need to skip it
+** rails new myapp --skip-active-record
+* add ` gem "mongoid", "~> 4.0.0.beta1" ` into Gemfile
+* bundle install
+* generate a mongonid.yml
+** rails g mongoid:config
+* open rails console `rails c`
+** Mongoid.load!("config/mongoid.yml", :development)
+*
