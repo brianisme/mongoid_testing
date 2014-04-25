@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  effectiveDate: 1
+  address: 
+  user: 
+
+two:
+  effectiveDate: 1
+  address: 
+  user: 
