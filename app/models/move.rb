@@ -4,5 +4,5 @@ class Move
   field :toAddress, type: Hash
   field :fromAddress, type: Hash
 
-  embedded_in :user
+  belongs_to :user
 end
